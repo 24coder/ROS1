@@ -1,0 +1,40 @@
+#include<ros/ros.h>
+#include<geometry_msgs/Twist.h>
+int main(int argc, char **argv)
+{
+
+//initialize the node
+ros::init(argc,argv,"velocity_publisher");
+//create the nodehandler
+ros::NodeHandle n;
+
+//create a publisher, set the name of the topic of the node is /turtle/cmd/vel. the type of the msgs 
+//is geometry_msgs::twist.  and the length is 10
+ros::Publisher yyk=n.advertise<geometry_msgs::Twist>("/turtle1/cmd_vel",10); 
+//combine the publisher with the node
+
+//set the frequency of the msgs 
+ros::Rate loop_rate(10);
+
+int count=0;
+while(ros::ok())
+{
+
+//initialize the geometry_mags::twist 
+
+
+geometry_msgs::Twist xiao_xi;
+xiao_xi.linear.x=0.5;
+xiao_xi.angular.z=0.2;
+//pub the msgs
+yyk.publish(xiao_xi);
+ROS_INFO("publish turtle velocity command[%0.2f m/s,%0.2f rad/s]",xiao_xi.linear.x,xiao_xi.angular.z);
+//ros_info is similar to the "printf" in c ,it output the logs
+loop_rate.sleep();
+
+
+}
+
+return 0;
+
+}
