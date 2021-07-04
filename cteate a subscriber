@@ -1,0 +1,31 @@
+#include<ros/ros.h>
+#include"turtlesim/Pose.h"
+
+
+
+void posecallback(const turtlesim::Pose::ConstPtr&msg)
+{
+ROS_INFO("the pose of the turtle is  x: %0.5f,y:0.6f ",msg->x,msg->y);
+}  
+
+int  main(int argc,char** argv)
+{
+//initialize  the node 
+ros::init(argc,argv,"pose_subscriber");
+
+
+//create the node_handle
+ros::NodeHandle n;
+
+//create a subscriber,the name of the topic to be subcribed is /tuttel1/pose,   
+//registered the callback function posecallback
+ros::Subscriber yyk_sub=n.subscribe("/turtle1/pose",10,posecallback);
+
+//enter the cycle for watting the messages
+ros::spin();
+
+
+return 0;
+
+
+}
