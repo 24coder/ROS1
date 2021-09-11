@@ -31,9 +31,13 @@ https://blog.csdn.net/sinat_25923849/article/details/108527802?ops_request_misc=
 
 path-planning中所有所有路径规划算法均调通
 
-
-
-
+action：
+1.可以反馈状态信息 （周期反馈给客户端目前的状态） 
+2.周期反馈任务运行的监控数据 
+3.可以取消动作  
+4.向客户端发送任务的执行结果（只发布一次） 
+5.发布任务目标
+![image](https://user-images.githubusercontent.com/62461065/132931908-1e23f4f0-163d-49a5-bf2d-bb01884a7287.png)
 
 
 
