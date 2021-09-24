@@ -39,6 +39,7 @@ action：
 5.发布任务目标
 ![image](https://user-images.githubusercontent.com/62461065/132931908-1e23f4f0-163d-49a5-bf2d-bb01884a7287.png)
 
+使用rosdep install  （功能包名称）安装功能包的时候会同时安装相关依赖 这样安装起来就很方便
 
 
 
