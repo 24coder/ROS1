@@ -1,0 +1,14 @@
+source  devel/setup.bash
+roscd  +功能包名     直接进入对应的功能包的路径  可以查看相关的源码
+rosdep install --from-paths src --ignore-src --rosdistro melodic    安装工作空间下的src下的编译之后功能包的依赖
+rosrun可以直接执行可执行文件 
+echo $ROS_PACKAGE_PATH          打印工作空间目录
+echo “source ~/tutorial_ws/devel/setup.bash” >> ~/.bashrc    这句话的意思就是把 source ~/tutorial_ws/devel/setup.bash这条指令加到 ~/.bashrc这个脚本后面。
+source  ./devel/setup.bash   临时source一下
+删除工作空间：  删除devel和build文件夹删了即可
+.bashrc书写技巧：
+~source  /opt/ros/melodic/setup.bash
+~source  /exp/catkin_ws/devel/setup.bash   --extend
+~source  /self_drving/devel/setup.bash   --extend
+加上--extend之后就可以任意关闭任何一个工作空间 ###除了根目录的那个（最原始那个opt那个），其他自己创见的工作空间都要加上 --extend
+rospack find  查找功能包
