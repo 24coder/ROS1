@@ -21,12 +21,13 @@ https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=16&spm_id_from=pageDriver
 | 使用场景 | 弱逻辑处理，多数据传输 | 强逻辑处理，少数据传输 |
 
 ## Action：
-1.双向消息{目标(goal)/结果（result）/反馈(feedback)}可以反馈状态信息 （周期反馈给客户端目前的状态) 
-2.周期反馈任务运行的监控数据 
-3.可以取消动作  
-4.向客户端发送任务的执行结果（只发布一次） 
-5.发布任务目标
-<img src="https://user-images.githubusercontent.com/62461065/132931908-1e23f4f0-163d-49a5-bf2d-bb01884a7287.png" alt="image" style="zoom: 25%;" />
+1.双向消息{目标(goal)/结果（result）/反馈(feedback)}可以反馈状态信息 （周期反馈给客户端目前的状态)   
+2.周期反馈任务运行的监控数据   
+3.可以取消动作    
+4.向客户端发送任务的执行结果（只发布一次）   
+5.发布任务目标  
+![image](https://user-images.githubusercontent.com/62461065/158843530-f69b0915-07ad-4606-b56b-f93107ab4aaf.png)
+
 
 ## parameter
 参数服务类似于程序中的全局变量  Talker可以改变全局变量的值  listener可以获取更新之后的全局变量的值，  
