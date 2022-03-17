@@ -1,4 +1,136 @@
-my ros learning record
+## ROS使用相关问题
+### 1、rosdep失效解决策略
+https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=15  
+https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=16&spm_id_from=pageDriver
+## 三种通信方式
+## Topic：
+1、单向接收/发送  
+## Service：
+1、双向请求/响应
+### 话题和服务的区别
+
+条目       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   话题               &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;服务  
+同步性	    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   异步	             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;同步  
+通信模型	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 发布/订阅	         &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;        客户端/服务器  
+反馈机制	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    无	  &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;有  
+底层协议	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  ROSTCP/ROSUDP   	  &emsp;&emsp;&emsp;     ROSTCP/ROSUDP  
+缓冲区	    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    有	              &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;               无  
+实时性	     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    弱	             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                强  
+节点关系	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    多对多	         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           一对多（一个Server）  
+使用场景 &emsp;&emsp;&emsp; 	弱逻辑处理，多数据传输	    &emsp;&emsp;&emsp; 强逻辑处理，少数据传输  
+
+
+## Action：
+1.双向消息{目标(goal)/结果（result）/反馈(feedback)}可以反馈状态信息 （周期反馈给客户端目前的状态) 
+2.周期反馈任务运行的监控数据 
+3.可以取消动作  
+4.向客户端发送任务的执行结果（只发布一次） 
+5.发布任务目标
+![image](https://user-images.githubusercontent.com/62461065/132931908-1e23f4f0-163d-49a5-bf2d-bb01884a7287.png)
+
+## parameter
+参数服务类似于程序中的全局变量  Talker可以改变全局变量的值  listener可以获取更新之后的全局变量的值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 点击go to file进入文件列表    点击文件名进入文件详情页进行操作
 rosrun subscriber的时候.cpp文件不能添加.cpp后缀，不然会报错
 
@@ -31,110 +163,8 @@ https://blog.csdn.net/sinat_25923849/article/details/108527802?ops_request_misc=
 
 path-planning中所有所有路径规划算法均调通
 
-action：
-1.可以反馈状态信息 （周期反馈给客户端目前的状态） 
-2.周期反馈任务运行的监控数据 
-3.可以取消动作  
-4.向客户端发送任务的执行结果（只发布一次） 
-5.发布任务目标
-![image](https://user-images.githubusercontent.com/62461065/132931908-1e23f4f0-163d-49a5-bf2d-bb01884a7287.png)
+
 
 使用rosdep install  （功能包名称）安装功能包的时候会同时安装相关依赖 这样安装起来就很方便
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+测试工具：ros内置rostest单元/集成测试框架
