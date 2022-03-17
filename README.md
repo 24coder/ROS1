@@ -84,8 +84,6 @@ https://blog.csdn.net/sinat_25923849/article/details/108527802?ops_request_misc=
 
 path-planning中所有所有路径规划算法均调通
 
-
-
 使用rosdep install  （功能包名称）安装功能包的时候会同时安装相关依赖 这样安装起来就很方便
 
 测试工具：ros内置rostest单元/集成测试框架
