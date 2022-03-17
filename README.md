@@ -9,16 +9,16 @@ https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=16&spm_id_from=pageDriver
 1、双向请求/响应
 ### 话题和服务的区别
 
-条目       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   话题               &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;服务  
-同步性	    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   异步	             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;同步  
-通信模型	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 发布/订阅	         &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;        客户端/服务器  
-反馈机制	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    无	  &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;有  
-底层协议	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  ROSTCP/ROSUDP   	  &emsp;&emsp;&emsp;     ROSTCP/ROSUDP  
-缓冲区	    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    有	              &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;               无  
-实时性	     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    弱	             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                强  
-节点关系	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    多对多	         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           一对多（一个Server）  
-使用场景 &emsp;&emsp;&emsp; 	弱逻辑处理，多数据传输	    &emsp;&emsp;&emsp; 强逻辑处理，少数据传输  
-
+| 条目 | 话题 |服务 |
+| ------ | ------ | ------ |
+| 同步性 | 异步 | 同步 |
+| 通信模型 | 发布/订阅 | 客户端/服务器 |
+| 反馈机制 | 无 | 有 |
+| 底层协议 | ROSTCP/ROSUDP | ROSTCP/ROSUDP |
+| 缓冲区 | 有 | 无 |
+| 实时性 | 弱 | 强 |
+| 节点关系 | 多对多 | 一对多 |
+| 使用场景 | 弱逻辑处理，多数据传输 | 强逻辑处理，少数据传输 |
 
 ## Action：
 1.双向消息{目标(goal)/结果（result）/反馈(feedback)}可以反馈状态信息 （周期反馈给客户端目前的状态) 
@@ -29,84 +29,7 @@ https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=16&spm_id_from=pageDriver
 ![image](https://user-images.githubusercontent.com/62461065/132931908-1e23f4f0-163d-49a5-bf2d-bb01884a7287.png)
 
 ## parameter
-参数服务类似于程序中的全局变量  Talker可以改变全局变量的值  listener可以获取更新之后的全局变量的值
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+参数服务类似于程序中的全局变量  Talker可以改变全局变量的值  listener可以获取更新之后的全局变量的值，  
 
 
 
@@ -134,9 +57,9 @@ https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=16&spm_id_from=pageDriver
 点击go to file进入文件列表    点击文件名进入文件详情页进行操作
 rosrun subscriber的时候.cpp文件不能添加.cpp后缀，不然会报错
 
-Q1:service 中的 server and client和 message中publisher and subscriber 有什么区别？
+Q1:service 中的 server and client和 topic中publisher and subscriber 有什么区别？
 
-A:message在publisher and subscriber中是一直进行发送和订阅  service 中的 server and client server请求一次，服务器应答一次。
+A:topic中的message在publisher and subscriber中是一直进行发送和订阅  service 中message的 server and client server请求一次，服务器应答一次。
 
 
 Q2:为什么更新源之后会出现下面这个问题？
