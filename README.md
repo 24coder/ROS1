@@ -26,8 +26,13 @@ https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=16&spm_id_from=pageDriver
 3.可以取消动作    
 4.向客户端发送任务的执行结果（只发布一次）   
 5.发布任务目标 
+
+
 <div align=center>
-action
+<font color=#0099ff size=12 face="楷体">Action</font>
+</div>
+
+<div align=center>
 <img src="https://user-images.githubusercontent.com/62461065/158843530-f69b0915-07ad-4606-b56b-f93107ab4aaf.png" width="50%" height="50%" />
 </div>
 
