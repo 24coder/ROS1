@@ -27,9 +27,8 @@ https://www.bilibili.com/video/BV1Ci4y1L7ZZ?p=16&spm_id_from=pageDriver
 4.向客户端发送任务的执行结果（只发布一次）   
 5.发布任务目标 
 
-
 <div align=center>
-<font color=#0099ff size=12 face="楷体">Action</font>
+  <font color=#0099ff size=20 face="楷体">Action</font>
 </div>
 
 <div align=center>
