@@ -1,0 +1,10 @@
+<launch>
+
+<node pkg="pub_lis" name="publisher" type="pub_node"/>
+<node pkg="pub_lis" name="listener" type="lis_node"/>
+<node pkg="pub_lis" name="client" type="client_node"/>
+<node pkg="pub_lis" name="server" type="server_node"/>
+<node pkg="pub_lis" name="was_client" type="DoDishes_client"/>
+<node pkg="pub_lis" name="was_server" type="DoDishes_server"/>
+
+</launch>
